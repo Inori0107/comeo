@@ -19,23 +19,26 @@
 
 				<div class="grid gap-4 grid-cols-3">
 					<!-- 系統整合服務 -->
-					<div class="bg-white rounded-xl p-6 shadow-lg">
-						<div class="flex justify-center items-center aspect-[2/3]">
-							<h3 class="font-extrabold text-base md:text-lg lg:text-xl">系統整合服務</h3>
+					<div class="service-card bg-white rounded-xl shadow-lg overflow-hidden" style="background-image: url('/system.png')">
+						<div class="service-overlay"></div>
+						<div class="service-content flex items-end aspect-[2/3] p-4 relative z-10">
+							<h3 class="font-bold text-sm md:text-base lg:text-lg text-white drop-shadow-lg">系統整合服務</h3>
 						</div>
 					</div>
 
 					<!-- AI 安防解決方案 -->
-					<div class="bg-white rounded-xl p-6 shadow-lg">
-						<div class="flex justify-center items-center aspect-[2/3]">
-							<h3 class="font-extrabold text-base md:text-lg lg:text-xl">AI 安防解決方案</h3>
+					<div class="service-card bg-white rounded-xl shadow-lg overflow-hidden" style="background-image: url('/ai-solution.png')">
+						<div class="service-overlay"></div>
+						<div class="service-content flex items-end aspect-[2/3] p-4 relative z-10">
+							<h3 class="font-bold text-sm md:text-base lg:text-lg text-white drop-shadow-lg">AI 安防解決方案</h3>
 						</div>
 					</div>
 
 					<!-- 專案顧問與技術支援 -->
-					<div class="bg-white rounded-xl p-6 shadow-lg">
-						<div class="flex justify-center items-center aspect-[2/3]">
-							<h3 class="font-extrabold text-base md:text-lg lg:text-xl">專案顧問與技術支援</h3>
+					<div class="service-card bg-white rounded-xl shadow-lg overflow-hidden" style="background-image: url('/consultation.png')">
+						<div class="service-overlay"></div>
+						<div class="service-content flex items-end aspect-[2/3] p-4 relative z-10">
+							<h3 class="font-bold text-sm md:text-base lg:text-lg text-white drop-shadow-lg">專案顧問與技術支援</h3>
 						</div>
 					</div>
 				</div>
@@ -138,5 +141,22 @@ onUnmounted(() => {
 	-webkit-background-clip: text;
 	background-clip: text;
 	color: transparent;
+}
+
+.service-card {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;
+}
+
+.service-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: linear-gradient(to bottom, rgba(0, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.3) 40%, rgba(255, 0, 0, 0.3) 100%);
+	border-radius: 0.75rem;
 }
 </style>

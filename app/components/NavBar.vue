@@ -1,5 +1,5 @@
 <template>
-	<nav class="fixed top-0 left-0 right-0 z-50 py-4 lg:py-8">
+	<nav class="fixed top-0 left-0 right-0 z-50 py-4 transition-transform duration-300" :class="{ '-translate-y-full': isHidden }">
 		<div class="container mx-auto px-4 py-2 flex items-center justify-between gap-8">
 			<!-- Logo + Company 區塊 -->
 			<div class="flex items-center cursor-pointer" @click="scrollToId('top')">
@@ -86,8 +86,32 @@
 </template>
 
 <script setup lang="ts">
+import { ref, onMounted, onUnmounted } from "vue";
+
+const isHidden = ref(false);
+
 const scrollToId = (id: string) => {
 	const el = document.getElementById(id);
 	if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
 };
+
+const handleScroll = () => {
+	const footer = document.getElementById("contact");
+	if (!footer) return;
+
+	const footerRect = footer.getBoundingClientRect();
+	const windowHeight = window.innerHeight;
+
+	// 當 footer 頂部進入視窗範圍時隱藏導航列
+	isHidden.value = footerRect.top <= windowHeight * 0.1;
+};
+
+onMounted(() => {
+	window.addEventListener("scroll", handleScroll);
+	handleScroll(); // 初始檢查
+});
+
+onUnmounted(() => {
+	window.removeEventListener("scroll", handleScroll);
+});
 </script>
