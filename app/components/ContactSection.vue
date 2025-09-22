@@ -75,28 +75,22 @@
 								<p class="text-sm text-gray-600 mb-2">社群媒體</p>
 								<div class="flex flex-wrap gap-2">
 									<a href="#" class="flex items-center gap-2 px-3 py-1.5 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors text-sm">
-										<svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+										<svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
 											<path
-												d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
+												fill="#ffffff"
+												d="M64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l98.2 0 0-145.8-52.8 0 0-78.2 52.8 0 0-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4l0 70.8c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2l0 27.8 83.6 0-14.4 78.2-69.3 0 0 145.8 129 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32z"
 											/>
 										</svg>
 										Facebook
 									</a>
-									<a href="#" class="flex items-center gap-2 px-3 py-1.5 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors text-sm">
-										<svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
-											<path
-												d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
-											/>
-										</svg>
-										LinkedIn
-									</a>
 									<a href="#" class="flex items-center gap-2 px-3 py-1.5 bg-green-500 text-white rounded-md hover:bg-green-600 transition-colors text-sm">
-										<svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+										<svg class="w-[20px] h-[20px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
 											<path
-												d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"
+												fill="#ffffff"
+												d="M375 260.8L375 342.1C375 344.2 373.4 345.8 371.3 345.8L358.3 345.8C357 345.8 355.9 345.1 355.3 344.3L318 294L318 342.2C318 344.3 316.4 345.9 314.3 345.9L301.3 345.9C299.2 345.9 297.6 344.3 297.6 342.2L297.6 260.9C297.6 258.8 299.2 257.2 301.3 257.2L314.2 257.2C315.3 257.2 316.6 257.8 317.2 258.8L354.5 309.1L354.5 260.9C354.5 258.8 356.1 257.2 358.2 257.2L371.2 257.2C373.3 257.1 375 258.8 375 260.7L375 260.8zM281.3 257.1L268.3 257.1C266.2 257.1 264.6 258.7 264.6 260.8L264.6 342.1C264.6 344.2 266.2 345.8 268.3 345.8L281.3 345.8C283.4 345.8 285 344.2 285 342.1L285 260.8C285 258.9 283.4 257.1 281.3 257.1zM249.9 325.2L214.3 325.2L214.3 260.8C214.3 258.7 212.7 257.1 210.6 257.1L197.6 257.1C195.5 257.1 193.9 258.7 193.9 260.8L193.9 342.1C193.9 343.1 194.2 343.9 194.9 344.6C195.6 345.2 196.4 345.6 197.4 345.6L249.6 345.6C251.7 345.6 253.3 344 253.3 341.9L253.3 328.9C253.3 327 251.7 325.2 249.8 325.2L249.9 325.2zM443.6 257.1L391.3 257.1C389.4 257.1 387.6 258.7 387.6 260.8L387.6 342.1C387.6 344 389.2 345.8 391.3 345.8L443.5 345.8C445.6 345.8 447.2 344.2 447.2 342.1L447.2 329C447.2 326.9 445.6 325.3 443.5 325.3L408 325.3L408 311.7L443.5 311.7C445.6 311.7 447.2 310.1 447.2 308L447.2 294.9C447.2 292.8 445.6 291.2 443.5 291.2L408 291.2L408 277.5L443.5 277.5C445.6 277.5 447.2 275.9 447.2 273.8L447.2 260.8C447.1 258.9 445.5 257.1 443.5 257.1L443.6 257.1zM576 157.4L576 483.4C575.9 534.6 533.9 576.1 482.6 576L156.6 576C105.4 575.9 63.9 533.8 64 482.6L64 156.6C64.1 105.4 106.2 63.9 157.4 64L483.4 64C534.6 64.1 576.1 106.1 576 157.4zM505.6 297.5C505.6 214.1 421.9 146.2 319.2 146.2C216.5 146.2 132.8 214.1 132.8 297.5C132.8 372.2 199.1 434.9 288.7 446.8C310.5 451.5 308 459.5 303.1 488.9C302.3 493.6 299.3 507.3 319.2 499C339.1 490.7 426.5 435.8 465.7 390.8C492.7 361.1 505.6 331 505.6 297.7L505.6 297.5z"
 											/>
 										</svg>
-										WhatsApp
+										Line
 									</a>
 								</div>
 							</div>
@@ -107,72 +101,138 @@
 				<!-- 諮詢表單 -->
 				<div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-200">
 					<h4 class="text-xl font-bold text-gray-900 mb-6">諮詢表單</h4>
-					<form class="space-y-4" @submit.prevent="onSubmit">
+					<form class="space-y-4" @submit.prevent="onSubmit" role="form" aria-label="諮詢表單">
+						<!-- 成功訊息 -->
+						<div v-if="showSuccessMessage" class="bg-green-50 border border-green-200 rounded-lg p-4 mb-4" role="alert" aria-live="polite">
+							<div class="flex items-center gap-3">
+								<svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+									<path
+										fill-rule="evenodd"
+										d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+										clip-rule="evenodd"
+									/>
+								</svg>
+								<p class="text-green-800 font-medium">已收到您的需求，我們將儘快與您聯繫！</p>
+							</div>
+						</div>
+
 						<!-- 第一行：公司名稱 / 聯絡人 -->
 						<div class="grid grid-cols-2 gap-4">
 							<div>
-								<label for="company" class="block text-sm font-medium text-gray-700 mb-2">公司名稱</label>
+								<label for="company" class="block text-sm font-medium text-gray-700 mb-2"> 公司名稱 <span class="text-red-500">*</span> </label>
 								<input
 									id="company"
 									v-model="state.company"
+									@input="clearError('company')"
 									type="text"
 									placeholder="請輸入公司名稱"
-									class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent"
+									:aria-invalid="!!errors.company"
+									:aria-describedby="errors.company ? 'company-error' : undefined"
+									required
+									:class="[
+										'w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-colors',
+										errors.company ? 'border-red-300 bg-red-50' : 'border-gray-300'
+									]"
 								/>
+								<p v-if="errors.company" id="company-error" class="text-red-600 text-sm mt-1" role="alert">{{ errors.company }}</p>
 							</div>
 							<div>
-								<label for="name" class="block text-sm font-medium text-gray-700 mb-2">聯絡人</label>
+								<label for="name" class="block text-sm font-medium text-gray-700 mb-2"> 聯絡人 <span class="text-red-500">*</span> </label>
 								<input
 									id="name"
 									v-model="state.name"
+									@input="clearError('name')"
 									type="text"
 									placeholder="請輸入聯絡人姓名"
-									class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent"
+									:aria-invalid="!!errors.name"
+									:aria-describedby="errors.name ? 'name-error' : undefined"
+									required
+									:class="[
+										'w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-colors',
+										errors.name ? 'border-red-300 bg-red-50' : 'border-gray-300'
+									]"
 								/>
+								<p v-if="errors.name" id="name-error" class="text-red-600 text-sm mt-1" role="alert">{{ errors.name }}</p>
 							</div>
 						</div>
 
 						<!-- 第二行：聯絡電話 / 聯絡信箱 -->
 						<div class="grid grid-cols-2 gap-4">
 							<div>
-								<label for="phone" class="block text-sm font-medium text-gray-700 mb-2">聯絡電話</label>
+								<label for="phone" class="block text-sm font-medium text-gray-700 mb-2"> 聯絡電話 <span class="text-red-500">*</span> </label>
 								<input
 									id="phone"
 									v-model="state.phone"
+									@input="clearError('phone')"
 									type="tel"
 									placeholder="請輸入聯絡電話"
-									class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent"
+									:aria-invalid="!!errors.phone"
+									:aria-describedby="errors.phone ? 'phone-error' : undefined"
+									required
+									:class="[
+										'w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-colors',
+										errors.phone ? 'border-red-300 bg-red-50' : 'border-gray-300'
+									]"
 								/>
+								<p v-if="errors.phone" id="phone-error" class="text-red-600 text-sm mt-1" role="alert">{{ errors.phone }}</p>
 							</div>
 							<div>
-								<label for="email" class="block text-sm font-medium text-gray-700 mb-2">聯絡信箱</label>
+								<label for="email" class="block text-sm font-medium text-gray-700 mb-2"> 聯絡信箱 <span class="text-red-500">*</span> </label>
 								<input
 									id="email"
 									v-model="state.email"
+									@input="clearError('email')"
 									type="email"
 									placeholder="請輸入聯絡信箱"
-									class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent"
+									:aria-invalid="!!errors.email"
+									:aria-describedby="errors.email ? 'email-error' : undefined"
+									required
+									:class="[
+										'w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-colors',
+										errors.email ? 'border-red-300 bg-red-50' : 'border-gray-300'
+									]"
 								/>
+								<p v-if="errors.email" id="email-error" class="text-red-600 text-sm mt-1" role="alert">{{ errors.email }}</p>
 							</div>
 						</div>
 
 						<!-- 第三行：需求描述 -->
 						<div>
-							<label for="message" class="block text-sm font-medium text-gray-700 mb-2">需求描述</label>
+							<label for="message" class="block text-sm font-medium text-gray-700 mb-2"> 需求描述 </label>
 							<textarea
 								id="message"
 								v-model="state.message"
+								@input="clearError('message')"
 								placeholder="請簡述您的需求..."
 								rows="4"
-								class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent resize-vertical"
+								:aria-invalid="!!errors.message"
+								:aria-describedby="errors.message ? 'message-error' : undefined"
+								:class="[
+									'w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent resize-vertical transition-colors',
+									errors.message ? 'border-red-300 bg-red-50' : 'border-gray-300'
+								]"
 							></textarea>
+							<p v-if="errors.message" id="message-error" class="text-red-600 text-sm mt-1" role="alert">{{ errors.message }}</p>
 						</div>
 
 						<button
 							type="submit"
-							class="w-full bg-brand-orange text-white font-semibold py-3 px-4 rounded-lg hover:bg-orange-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-orange focus:ring-offset-2"
+							:disabled="isSubmitting"
+							:aria-label="isSubmitting ? '正在送出表單，請稍候' : '送出諮詢表單'"
+							:class="[
+								'w-full font-semibold py-3 px-4 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-orange focus:ring-offset-2 flex items-center justify-center gap-2',
+								isSubmitting ? 'bg-gray-400 text-gray-200 cursor-not-allowed' : 'bg-brand-orange text-white hover:bg-orange-600 hover:shadow-lg'
+							]"
 						>
-							送出諮詢
+							<svg v-if="isSubmitting" class="animate-spin w-5 h-5" fill="none" viewBox="0 0 24 24" aria-hidden="true">
+								<circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+								<path
+									class="opacity-75"
+									fill="currentColor"
+									d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+								></path>
+							</svg>
+							{{ isSubmitting ? "送出中..." : "送出諮詢" }}
 						</button>
 					</form>
 				</div>
@@ -205,21 +265,21 @@
 								></span>
 							</a>
 							<a
-								href="#services"
-								@click.prevent="scrollToId('services')"
+								href="#partners"
+								@click.prevent="scrollToId('partners')"
 								class="text-white font-semibold text-base lg:text-lg px-4 py-2 rounded-lg transition-all duration-300 hover:text-yellow-200 hover:-translate-y-0.5 relative group"
 							>
-								服務項目
+								合作夥伴
 								<span
 									class="absolute bottom-1 left-1/2 w-0 h-0.5 bg-yellow-200 rounded-full transition-all duration-300 transform -translate-x-1/2 group-hover:w-3/5"
 								></span>
 							</a>
 							<a
-								href="#industries"
-								@click.prevent="scrollToId('industries')"
+								href="#portfolio"
+								@click.prevent="scrollToId('portfolio')"
 								class="text-white font-semibold text-base lg:text-lg px-4 py-2 rounded-lg transition-all duration-300 hover:text-yellow-200 hover:-translate-y-0.5 relative group"
 							>
-								產業專精
+								實績案例
 								<span
 									class="absolute bottom-1 left-1/2 w-0 h-0.5 bg-yellow-200 rounded-full transition-all duration-300 transform -translate-x-1/2 group-hover:w-3/5"
 								></span>
@@ -230,7 +290,7 @@
 			</div>
 
 			<!-- 版權資訊 -->
-			<div class="text-center py-4 absolute bottom-0 left-0 right-0">
+			<div class="text-center py-4 absolute bottom-4 left-0 right-0">
 				<p class="text-gray-600 text-sm">© 2025 Comeo Technology. All rights reserved.</p>
 			</div>
 		</div>
@@ -238,7 +298,7 @@
 </template>
 
 <script setup lang="ts">
-import { reactive } from "vue";
+import { reactive, ref } from "vue";
 
 interface ContactState {
 	company: string;
@@ -247,20 +307,115 @@ interface ContactState {
 	email: string;
 	message: string;
 }
-const state = reactive<ContactState>({ company: "", name: "", phone: "", email: "", message: "" });
+
+interface FormErrors {
+	company?: string;
+	name?: string;
+	phone?: string;
+	email?: string;
+	message?: string;
+}
+
+const state = reactive<ContactState>({
+	company: "",
+	name: "",
+	phone: "",
+	email: "",
+	message: ""
+});
+
+const errors = reactive<FormErrors>({});
+const isSubmitting = ref(false);
+const showSuccessMessage = ref(false);
+
+// 驗證規則
+const validateForm = (): boolean => {
+	// 清除之前的錯誤
+	Object.keys(errors).forEach((key) => {
+		delete errors[key as keyof FormErrors];
+	});
+
+	let isValid = true;
+
+	// 公司名稱驗證
+	if (!state.company.trim()) {
+		errors.company = "請輸入公司名稱";
+		isValid = false;
+	}
+
+	// 聯絡人驗證
+	if (!state.name.trim()) {
+		errors.name = "請輸入聯絡人姓名";
+		isValid = false;
+	}
+
+	// 電話驗證
+	if (!state.phone.trim()) {
+		errors.phone = "請輸入聯絡電話";
+		isValid = false;
+	} else if (!/^[\d\-\+\(\)\s]+$/.test(state.phone)) {
+		errors.phone = "請輸入有效的電話號碼";
+		isValid = false;
+	}
+
+	// 電子郵件驗證
+	if (!state.email.trim()) {
+		errors.email = "請輸入聯絡信箱";
+		isValid = false;
+	} else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(state.email)) {
+		errors.email = "請輸入有效的電子郵件格式";
+		isValid = false;
+	}
+
+	// 需求描述驗證（可選填）
+	// 移除字數限制，讓使用者自由填寫
+
+	return isValid;
+};
 
 const scrollToId = (id: string) => {
 	const el = document.getElementById(id);
 	if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
 };
 
-const onSubmit = () => {
-	// 目前示範：直接在前端顯示送出成功，可日後串接 API
-	alert("已收到您的需求，我們將儘快與您聯繫！");
-	state.company = "";
-	state.name = "";
-	state.phone = "";
-	state.email = "";
-	state.message = "";
+const onSubmit = async () => {
+	// 驗證表單
+	if (!validateForm()) {
+		return;
+	}
+
+	isSubmitting.value = true;
+
+	try {
+		// 模擬 API 呼叫延遲
+		await new Promise((resolve) => setTimeout(resolve, 1500));
+
+		// 顯示成功訊息
+		showSuccessMessage.value = true;
+
+		// 重置表單
+		state.company = "";
+		state.name = "";
+		state.phone = "";
+		state.email = "";
+		state.message = "";
+
+		// 3秒後隱藏成功訊息
+		setTimeout(() => {
+			showSuccessMessage.value = false;
+		}, 3000);
+	} catch (error) {
+		console.error("表單提交失敗:", error);
+		// 這裡可以加入錯誤處理邏輯
+	} finally {
+		isSubmitting.value = false;
+	}
+};
+
+// 清除特定欄位的錯誤
+const clearError = (field: keyof FormErrors) => {
+	if (errors[field]) {
+		delete errors[field];
+	}
 };
 </script>

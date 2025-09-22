@@ -1,5 +1,5 @@
 <template>
-	<section ref="container" class="lg:grid lg:grid-cols-12 container mx-auto px-4 lg:px-8">
+	<section id="about" ref="container" class="lg:grid lg:grid-cols-12 container mx-auto px-4 lg:px-8 gap-8">
 		<div ref="leftPanel" class="py-24 lg:col-span-7">
 			<!-- Part 1: Hero -->
 			<div class="space-y-4 min-h-[80vh] flex flex-col justify-center">
@@ -8,6 +8,14 @@
 					<span class="gradient-text">為您打造智慧新境界</span>
 				</h1>
 				<p class="text-lg md:text-xl lg:text-2xl tracking-wide text-gray-400">以專業技術引領轉變，陪伴企業完成數位蛻變。</p>
+
+				<!-- Scroll indicator (foreground) -->
+				<div class="pointer-events-none absolute left-1/2 -translate-x-1/2 bottom-6 md:bottom-12 flex flex-col items-center gap-2">
+					<div class="w-5 h-8 rounded-full border border-gray-400/60 flex items-start justify-center p-1 overflow-hidden">
+						<div class="w-1.5 h-1.5 rounded-full bg-gray-500/80 animate-scroll-dot"></div>
+					</div>
+					<p class="text-gray-500 text-xs tracking-widest">SCROLL</p>
+				</div>
 			</div>
 
 			<!-- Part 2: Services -->
@@ -22,7 +30,7 @@
 					<div class="service-card bg-white rounded-xl shadow-lg overflow-hidden" style="background-image: url('/system.png')">
 						<div class="service-overlay"></div>
 						<div class="service-content flex items-end aspect-[2/3] p-4 relative z-10">
-							<h3 class="font-bold text-sm md:text-base lg:text-lg text-white drop-shadow-lg">系統整合服務</h3>
+							<h3 class="font-bold text-base md:text-lg lg:text-xl text-white drop-shadow-lg">系統整合服務</h3>
 						</div>
 					</div>
 
@@ -30,7 +38,7 @@
 					<div class="service-card bg-white rounded-xl shadow-lg overflow-hidden" style="background-image: url('/ai-solution.png')">
 						<div class="service-overlay"></div>
 						<div class="service-content flex items-end aspect-[2/3] p-4 relative z-10">
-							<h3 class="font-bold text-sm md:text-base lg:text-lg text-white drop-shadow-lg">AI 安防解決方案</h3>
+							<h3 class="font-bold text-base md:text-lg lg:text-xl text-white drop-shadow-lg">AI 安防解決方案</h3>
 						</div>
 					</div>
 
@@ -38,7 +46,7 @@
 					<div class="service-card bg-white rounded-xl shadow-lg overflow-hidden" style="background-image: url('/consultation.png')">
 						<div class="service-overlay"></div>
 						<div class="service-content flex items-end aspect-[2/3] p-4 relative z-10">
-							<h3 class="font-bold text-sm md:text-base lg:text-lg text-white drop-shadow-lg">專案顧問與技術支援</h3>
+							<h3 class="font-bold text-base md:text-lg lg:text-xl text-white drop-shadow-lg">專案顧問與技術支援</h3>
 						</div>
 					</div>
 				</div>
@@ -83,7 +91,7 @@
 			</div>
 		</div>
 
-		<div class="lg:sticky top-0 h-screen lg:col-span-5">
+		<div class="hidden lg:block lg:sticky top-0 h-screen lg:col-span-5">
 			<div class="w-full h-full flex items-center justify-center">
 				<MorphAnimation :progress="progress" />
 			</div>
@@ -156,7 +164,25 @@ onUnmounted(() => {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background: linear-gradient(to bottom, rgba(0, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.3) 40%, rgba(255, 0, 0, 0.3) 100%);
+	background: linear-gradient(to bottom, rgba(0, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.2) 40%, rgba(255, 0, 0, 0.2) 100%);
 	border-radius: 0.75rem;
+}
+
+.animate-scroll-dot {
+	animation: scroll-dot 1.6s ease-in-out infinite;
+}
+
+@keyframes scroll-dot {
+	0% {
+		transform: translateY(0);
+		opacity: 0.2;
+	}
+	30% {
+		opacity: 1;
+	}
+	100% {
+		transform: translateY(16px);
+		opacity: 0;
+	}
 }
 </style>

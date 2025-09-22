@@ -5,6 +5,8 @@
 		<NavBar />
 
 		<StorySection />
+		<SupplierSection />
+		<PortfolioSection />
 		<ContactSection />
 	</div>
 </template>
