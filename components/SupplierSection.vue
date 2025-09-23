@@ -3,14 +3,21 @@
 		<div class="container mx-auto px-4 lg:px-8">
 			<!-- 標題區域 -->
 			<header class="text-center mb-16">
-				<h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 mb-6">供應商合作夥伴</h2>
+				<h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 mb-6">合作夥伴</h2>
 				<p class="text-xl md:text-2xl lg:text-3xl gradient-text font-bold mx-auto leading-relaxed">攜手遠岫科技，提供全方位的智慧安全解決方案</p>
 			</header>
 
 			<!-- 遠岫科技介紹 -->
 			<div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 mb-8">
 				<div class="flex flex-col lg:flex-row lg:items-center gap-8">
-					<img src="/yenshow.png" alt="遠岫科技 Logo" class="w-48 h-48 object-contain mx-auto" />
+					<img
+						src="/yenshow.png"
+						alt="遠岫科技 Logo - 專注於人臉辨識門禁、智慧對講、影像監控與整合平台的科技公司"
+						class="w-48 h-48 object-contain mx-auto"
+						loading="lazy"
+						width="192"
+						height="192"
+					/>
 					<div class="flex-1">
 						<h3 class="text-2xl font-bold text-gray-900 mb-4">遠岫科技有限公司</h3>
 						<p class="text-gray-700 leading-relaxed">

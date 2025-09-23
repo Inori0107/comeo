@@ -4,26 +4,35 @@ export default defineNuxtConfig({
 	devtools: { enabled: true },
 
 	modules: ["@nuxt/image", "@nuxtjs/tailwindcss"],
+
+	// 單頁式網站 SEO 優化配置
+	ssr: true, // 啟用服務端渲染
+	nitro: {
+		prerender: {
+			routes: ["/"] // 預渲染首頁
+		}
+	},
 	tailwindcss: {
 		cssPath: "~/assets/tailwind.css"
 	},
 
 	app: {
 		head: {
-			title: "蝶蛹科技 Comeo Technology — 系統整合與數位轉型",
+			title: "蝶蛹科技 Comeo Technology",
 			meta: [
-				{
-					name: "description",
-					content: "蝶蛹科技（Comeo Technology）專注 SI 系統整合，服務建商與中端企業，提供 ERP/CRM 整合、BIM 應用、雲端遷移與資安檢視等解決方案。"
-				},
 				{ name: "viewport", content: "width=device-width, initial-scale=1" },
-				{ property: "og:type", content: "website" },
-				{ property: "og:title", content: "蝶蛹科技 Comeo Technology — 系統整合與數位轉型" },
-				{ property: "og:description", content: "專為建商與中端企業的 SI 服務與數位轉型夥伴。" },
-				{ property: "og:image", content: "/og-cover.png" },
-				{ property: "og:locale", content: "zh_TW" }
+				{ name: "robots", content: "index, follow" },
+				{ name: "language", content: "zh-TW" }
 			],
-			link: [{ rel: "icon", type: "image/png", href: "/public/comeo-logo.png" }]
+			link: [
+				{ rel: "icon", type: "image/png", href: "/comeo-logo.png" },
+				{ rel: "preconnect", href: "https://fonts.googleapis.com" },
+				{ rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "" }
+			]
 		}
+	},
+	// 單頁式網站錨點 SEO 優化
+	experimental: {
+		payloadExtraction: false // 改善單頁式網站的 SEO
 	}
 });

@@ -290,7 +290,7 @@
 			</div>
 
 			<!-- 版權資訊 -->
-			<div class="text-center py-4 absolute bottom-4 left-0 right-0">
+			<div class="text-center py-4 absolute bottom-6 left-0 right-0">
 				<p class="text-gray-600 text-sm">© 2025 Comeo Technology. All rights reserved.</p>
 			</div>
 		</div>
@@ -387,26 +387,44 @@ const onSubmit = async () => {
 	isSubmitting.value = true;
 
 	try {
-		// 模擬 API 呼叫延遲
-		await new Promise((resolve) => setTimeout(resolve, 1500));
+		// 呼叫後端 API
+		const result = await $fetch("/api/contact", {
+			method: "POST",
+			body: {
+				company: state.company,
+				name: state.name,
+				phone: state.phone,
+				email: state.email,
+				message: state.message
+			}
+		});
 
-		// 顯示成功訊息
-		showSuccessMessage.value = true;
+		// 由於 result 的型別為 unknown，需先進行型別斷言或檢查
+		if (typeof result === "object" && result !== null && "success" in result && (result as any).success) {
+			// 顯示成功訊息
+			showSuccessMessage.value = true;
 
-		// 重置表單
-		state.company = "";
-		state.name = "";
-		state.phone = "";
-		state.email = "";
-		state.message = "";
+			// 重置表單
+			state.company = "";
+			state.name = "";
+			state.phone = "";
+			state.email = "";
+			state.message = "";
 
-		// 3秒後隱藏成功訊息
-		setTimeout(() => {
-			showSuccessMessage.value = false;
-		}, 3000);
-	} catch (error) {
+			// 3秒後隱藏成功訊息
+			setTimeout(() => {
+				showSuccessMessage.value = false;
+			}, 3000);
+		}
+	} catch (error: any) {
 		console.error("表單提交失敗:", error);
-		// 這裡可以加入錯誤處理邏輯
+
+		// 處理錯誤訊息
+		if (error.data?.message) {
+			alert(`送出失敗：${error.data.message}`);
+		} else {
+			alert("表單送出失敗，請稍後再試");
+		}
 	} finally {
 		isSubmitting.value = false;
 	}

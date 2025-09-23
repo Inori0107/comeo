@@ -8,14 +8,6 @@
 					<span class="gradient-text">為您打造智慧新境界</span>
 				</h1>
 				<p class="text-lg md:text-xl lg:text-2xl tracking-wide text-gray-400">以專業技術引領轉變，陪伴企業完成數位蛻變。</p>
-
-				<!-- Scroll indicator (foreground) -->
-				<div class="pointer-events-none absolute left-1/2 -translate-x-1/2 bottom-6 md:bottom-12 flex flex-col items-center gap-2">
-					<div class="w-5 h-8 rounded-full border border-gray-400/60 flex items-start justify-center p-1 overflow-hidden">
-						<div class="w-1.5 h-1.5 rounded-full bg-gray-500/80 animate-scroll-dot"></div>
-					</div>
-					<p class="text-gray-500 text-xs tracking-widest">SCROLL</p>
-				</div>
 			</div>
 
 			<!-- Part 2: Services -->
@@ -166,23 +158,5 @@ onUnmounted(() => {
 	bottom: 0;
 	background: linear-gradient(to bottom, rgba(0, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.2) 40%, rgba(255, 0, 0, 0.2) 100%);
 	border-radius: 0.75rem;
-}
-
-.animate-scroll-dot {
-	animation: scroll-dot 1.6s ease-in-out infinite;
-}
-
-@keyframes scroll-dot {
-	0% {
-		transform: translateY(0);
-		opacity: 0.2;
-	}
-	30% {
-		opacity: 1;
-	}
-	100% {
-		transform: translateY(16px);
-		opacity: 0;
-	}
 }
 </style>

@@ -1,12 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-	content: [
-		"./app/**/*.{js,vue,ts}",
-		"./app/components/**/*.{js,vue,ts}",
-		"./app/pages/**/*.{js,vue,ts}",
-		"./app/layouts/**/*.{js,vue,ts}",
-		"./app/plugins/**/*.{js,vue,ts}"
-	],
+	content: [],
 	theme: {
 		extend: {
 			colors: {
@@ -23,20 +17,7 @@ export default {
 				}
 			},
 			fontFamily: {
-				sans: [
-					"ui-sans-serif",
-					"system-ui",
-					"-apple-system",
-					"Segoe UI",
-					"Roboto",
-					"Noto Sans",
-					"Ubuntu",
-					"Cantarell",
-					"Helvetica Neue",
-					"Arial",
-					"Apple Color Emoji",
-					"Segoe UI Emoji"
-				]
+				sans: ["ui-sans-serif", "Roboto", "Noto Sans", "Arial"]
 			},
 			maxWidth: {
 				container: "1120px"
