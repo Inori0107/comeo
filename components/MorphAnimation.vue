@@ -1,12 +1,26 @@
 <template>
 	<transition name="enter-animation" appear>
 		<div class="w-3/4 h-auto rounded-lg overflow-hidden relative">
-			<img src="/taiwan00.png" :alt="`台灣圖片(基底) ${progress.toFixed(2)}`" class="w-full h-full object-cover select-none pointer-events-none" />
-			<img
+			<NuxtImg
+				src="/taiwan00.png"
+				:alt="`台灣圖片(基底) ${progress.toFixed(2)}`"
+				class="w-full h-full object-cover select-none pointer-events-none"
+				loading="lazy"
+				width="1630"
+				height="2048"
+				format="webp"
+				quality="85"
+			/>
+			<NuxtImg
 				src="/taiwan01.png"
 				:alt="`台灣圖片(覆蓋) ${progress.toFixed(2)}`"
 				class="w-full h-full object-cover absolute inset-0 select-none pointer-events-none transition-opacity duration-300 ease-out"
 				:style="{ opacity: overlayOpacity }"
+				loading="lazy"
+				width="1630"
+				height="2048"
+				format="webp"
+				quality="85"
 			/>
 		</div>
 	</transition>

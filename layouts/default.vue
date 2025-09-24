@@ -21,7 +21,17 @@
 			<div class="container mx-auto px-4 py-2 flex items-center justify-between gap-8">
 				<!-- Logo + Company 區塊 -->
 				<div class="flex items-center cursor-pointer" @click="scrollToId('top')">
-					<img src="/comeo-logo.png" alt="蝶蛹科技 Logo" class="w-12 lg:w-16 xl:w-20 aspect-square object-contain" />
+					<NuxtImg
+						src="/comeo-logo.png"
+						alt="蝶蛹科技 Logo"
+						class="w-12 lg:w-16 xl:w-20 aspect-square object-contain"
+						loading="eager"
+						width="288"
+						height="288"
+						format="webp"
+						quality="70"
+						preload
+					/>
 					<div class="ml-4">
 						<div class="font-extrabold text-lg lg:text-xl xl:text-2xl text-gray-900">蝶蛹科技</div>
 						<div class="text-sm lg:text-base xl:text-lg text-gray-500 font-medium text-nowrap">Comeo Technology</div>

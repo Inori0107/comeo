@@ -1,45 +1,43 @@
 <template>
-	<section id="partners" class="min-h-screen py-24">
+	<section id="partners" ref="container" class="min-h-screen py-24">
 		<div class="container mx-auto px-4 lg:px-8">
 			<!-- 標題區域 -->
-			<header class="text-center mb-16">
+			<header class="text-center mb-8">
 				<h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 mb-6">合作夥伴</h2>
 				<p class="text-xl md:text-2xl lg:text-3xl gradient-text font-bold mx-auto leading-relaxed">攜手遠岫科技，提供全方位的智慧安全解決方案</p>
 			</header>
 
 			<!-- 遠岫科技介紹 -->
-			<div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 mb-8">
-				<div class="flex flex-col lg:flex-row lg:items-center gap-8">
-					<img
-						src="/yenshow.png"
-						alt="遠岫科技 Logo - 專注於人臉辨識門禁、智慧對講、影像監控與整合平台的科技公司"
-						class="w-48 h-48 object-contain mx-auto"
-						loading="lazy"
-						width="192"
-						height="192"
-					/>
-					<div class="flex-1">
-						<h3 class="text-2xl font-bold text-gray-900 mb-4">遠岫科技有限公司</h3>
-						<p class="text-gray-700 leading-relaxed">
-							專注於人臉辨識門禁、智慧對講、影像監控與整合平台的開發與導入， 致力於成為企業與建築場域「出入口安全」與「智慧整合」的最佳夥伴。<br />
-							提供 12 大智慧方案，涵蓋多個領域，提升生活與工作空間的便捷、安全與高效。
-						</p>
-						<a
-							href="https://www.yenshow.com/"
-							target="_blank"
-							class="inline-flex items-center gap-2 mt-4 text-brand-orange hover:text-brand-red transition-colors font-semibold"
-						>
-							<span>了解更多</span>
-							<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-								/>
-							</svg>
-						</a>
-					</div>
+			<div class="bg-white rounded-2xl p-4 lg:p-8 shadow-lg border border-gray-200 mb-8 flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-8">
+				<img
+					src="/yenshow.png"
+					alt="遠岫科技 Logo - 專注於人臉辨識門禁、智慧對講、影像監控與整合平台的科技公司"
+					class="w-48 h-48 object-contain mx-auto"
+					loading="lazy"
+					width="192"
+					height="192"
+				/>
+				<div class="flex-1">
+					<h3 class="text-2xl font-bold text-gray-900 mb-4">遠岫科技有限公司</h3>
+					<p class="text-gray-700 leading-relaxed">
+						專注於人臉辨識門禁、智慧對講、影像監控與整合平台的開發與導入， 致力於成為企業與建築場域「出入口安全」與「智慧整合」的最佳夥伴。<br />
+						提供 12 大智慧方案，涵蓋多個領域，提升生活與工作空間的便捷、安全與高效。
+					</p>
+					<a
+						href="https://www.yenshow.com/"
+						target="_blank"
+						class="inline-flex items-center gap-2 mt-4 text-brand-orange hover:text-brand-red transition-colors font-semibold"
+					>
+						<span>了解更多</span>
+						<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+							/>
+						</svg>
+					</a>
 				</div>
 			</div>
 
@@ -83,13 +81,54 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, onMounted, onUnmounted } from "vue";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+gsap.registerPlugin(ScrollTrigger);
+
+const container = ref<HTMLElement | null>(null);
 const activeSeries = ref<string | null>(null);
+let ctx: gsap.Context;
 
 const setActiveSeries = (series: string) => {
 	activeSeries.value = activeSeries.value === series ? null : series;
 };
+
+onMounted(() => {
+	if (!container.value) return;
+
+	ctx = gsap.context(() => {
+		// 共用的 ScrollTrigger 配置
+
+		// Part 1: 標題區域動畫
+		const headerTimeline = gsap.timeline({
+			scrollTrigger: { trigger: "header", start: "top 80%" }
+		});
+
+		headerTimeline.to("header", { opacity: 1, y: 0, duration: 1 });
+
+		// Part 2: 遠岫科技介紹動畫
+		const introTimeline = gsap.timeline({
+			scrollTrigger: { trigger: ".bg-white", start: "top 70%" }
+		});
+
+		introTimeline.to(".bg-white", { opacity: 1, y: 0, duration: 1 });
+
+		// Part 3: 方案分類動畫
+		const categoriesTimeline = gsap.timeline({
+			scrollTrigger: { trigger: ".solution-category", start: "top 70%" }
+		});
+
+		categoriesTimeline.to(".solution-category", { opacity: 1, y: 0, duration: 1, stagger: 0.2 });
+	}, container.value);
+});
+
+onUnmounted(() => {
+	if (ctx) {
+		ctx.revert(); // cleanup
+	}
+});
 
 // 12 大智慧方案資料
 const solutionCategories = [
@@ -193,7 +232,7 @@ const solutionCategories = [
 				id: "smart-factory",
 				title: "AI智慧工廠",
 				description: "強化安全與工作流程",
-				icon: "M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z"
+				icon: "M19.428 15.502a1 1 0 00-1.04-.98H5.04a1 1 0 00-1.04.98l-1.5 6.5a1 1 0 001.04 1.02h13.5a1 1 0 001.04-1.02l-1.5-6.5zM9 12a1 1 0 11-2 0 1 1 0 012 0zm4 0a1 1 0 11-2 0 1 1 0 012 0z"
 			}
 		]
 	}
@@ -265,6 +304,14 @@ const solutionCategories = [
 
 .card-content {
 	flex: 1;
+}
+
+/* 防止首次渲染閃爍 - 統一初始狀態 */
+header,
+.bg-white,
+.solution-category {
+	opacity: 0;
+	transform: translateY(50px);
 }
 
 /* 響應式調整 */

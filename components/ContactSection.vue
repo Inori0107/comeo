@@ -1,9 +1,9 @@
 <template>
-	<footer id="contact" class="min-h-screen flex justify-center items-center relative">
+	<footer id="contact" ref="container" class="min-h-screen flex justify-center items-center relative">
 		<div class="container mx-auto px-4">
 			<div class="grid gap-8 grid-cols-1 lg:grid-cols-2 mb-8">
 				<!-- 聯絡我們 -->
-				<div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-200">
+				<div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 contact-info">
 					<h4 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
 						<svg class="w-5 h-5 text-brand-orange" fill="currentColor" viewBox="0 0 20 20">
 							<path
@@ -99,7 +99,7 @@
 				</div>
 
 				<!-- 諮詢表單 -->
-				<div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-200">
+				<div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 contact-form">
 					<h4 class="text-xl font-bold text-gray-900 mb-6">諮詢表單</h4>
 					<form class="space-y-4" @submit.prevent="onSubmit" role="form" aria-label="諮詢表單">
 						<!-- 成功訊息 -->
@@ -239,11 +239,21 @@
 			</div>
 
 			<!-- 公司品牌區塊 + 導航按鈕 -->
-			<div class="bg-white rounded-2xl p-8 pb-4 mb-8 shadow-lg border border-gray-200">
+			<div class="bg-white rounded-2xl p-8 pb-4 mb-8 shadow-lg border border-gray-200 company-brand">
 				<div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 mb-6">
 					<!-- 左側：公司品牌 -->
 					<div class="flex items-center gap-6">
-						<img src="/comeo-logo.png" alt="蝶蛹科技 Logo" class="w-20 h-20 lg:w-24 lg:h-24 object-contain rounded-2xl p-3 shadow-lg border border-gray-200" />
+						<NuxtImg
+							src="/comeo-logo.png"
+							alt="蝶蛹科技 Logo"
+							class="w-20 h-20 lg:w-24 lg:h-24 object-contain rounded-2xl p-3 shadow-lg border border-gray-200"
+							loading="eager"
+							width="288"
+							height="288"
+							format="webp"
+							quality="90"
+							preload
+						/>
 						<div>
 							<h3 class="text-2xl lg:text-3xl font-extrabold text-gray-900 mb-1">蝶蛹科技</h3>
 							<p class="text-lg text-gray-600 font-medium mb-2">Comeo Technology</p>
@@ -298,7 +308,14 @@
 </template>
 
 <script setup lang="ts">
-import { reactive, ref } from "vue";
+import { reactive, ref, onMounted, onUnmounted } from "vue";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
+const container = ref<HTMLElement | null>(null);
+let ctx: gsap.Context;
 
 interface ContactState {
 	company: string;
@@ -436,4 +453,58 @@ const clearError = (field: keyof FormErrors) => {
 		delete errors[field];
 	}
 };
+
+onMounted(() => {
+	if (!container.value) return;
+
+	ctx = gsap.context(() => {
+		// Part 1: 聯絡我們 - 從左進入
+		gsap.to(".contact-info", {
+			opacity: 1,
+			x: 0,
+			duration: 1,
+			scrollTrigger: { trigger: ".contact-info", start: "top 80%" }
+		});
+
+		// Part 2: 諮詢表單 - 從右進入
+		gsap.to(".contact-form", {
+			opacity: 1,
+			x: 0,
+			duration: 1,
+			scrollTrigger: { trigger: ".contact-form", start: "top 80%" }
+		});
+
+		// Part 3: 公司品牌區塊 - 由下浮現
+		gsap.to(".company-brand", {
+			opacity: 1,
+			y: 0,
+			duration: 1,
+			scrollTrigger: { trigger: ".company-brand", start: "top 80%" }
+		});
+	}, container.value);
+});
+
+onUnmounted(() => {
+	if (ctx) {
+		ctx.revert(); // cleanup
+	}
+});
 </script>
+
+<style scoped>
+/* 防止首次渲染閃爍 - 統一初始狀態 */
+.contact-info {
+	opacity: 0;
+	transform: translateX(-50px);
+}
+
+.contact-form {
+	opacity: 0;
+	transform: translateX(50px);
+}
+
+.company-brand {
+	opacity: 0;
+	transform: translateY(50px);
+}
+</style>

@@ -1,5 +1,5 @@
 <template>
-	<section id="portfolio" class="min-h-screen py-24">
+	<section id="portfolio" ref="container" class="min-h-screen py-24">
 		<div class="container mx-auto px-4 lg:px-8">
 			<!-- 標題區域 -->
 			<header class="text-center mb-8">
@@ -58,8 +58,12 @@
 						</p>
 
 						<!-- 技術標籤 -->
-						<div class="flex flex-wrap gap-2 mb-4">
-							<span v-for="tech in project.technologies" :key="tech" class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium">
+						<div class="flex flex-nowrap justify-center gap-2 mb-4">
+							<span
+								v-for="tech in project.technologies"
+								:key="tech"
+								class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium whitespace-nowrap"
+							>
 								{{ tech }}
 							</span>
 						</div>
@@ -136,7 +140,14 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from "vue";
+import { ref, computed, onMounted, onUnmounted } from "vue";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
+const container = ref<HTMLElement | null>(null);
+let ctx: gsap.Context;
 
 interface ProjectMetric {
 	label: string;
@@ -229,6 +240,39 @@ const openProjectModal = (project: Project) => {
 const closeProjectModal = () => {
 	selectedProject.value = null;
 };
+
+onMounted(() => {
+	if (!container.value) return;
+
+	ctx = gsap.context(() => {
+		// Part 1: 標題區域動畫
+		const headerTimeline = gsap.timeline({
+			scrollTrigger: { trigger: "header", start: "top 80%" }
+		});
+
+		headerTimeline.to("header", { opacity: 1, y: 0, duration: 1 });
+
+		// Part 2: 分類選單動畫
+		const menuTimeline = gsap.timeline({
+			scrollTrigger: { trigger: ".flex.justify-center", start: "top 70%" }
+		});
+
+		menuTimeline.to(".flex.justify-center", { opacity: 1, y: 0, duration: 1 });
+
+		// Part 3: 案例展示區域動畫
+		const portfolioTimeline = gsap.timeline({
+			scrollTrigger: { trigger: ".grid.grid-cols-1", start: "top 70%" }
+		});
+
+		portfolioTimeline.to(".grid.grid-cols-1", { opacity: 1, y: 0, duration: 1 });
+	}, container.value);
+});
+
+onUnmounted(() => {
+	if (ctx) {
+		ctx.revert(); // cleanup
+	}
+});
 </script>
 
 <style scoped>
@@ -240,12 +284,20 @@ const closeProjectModal = () => {
 }
 
 .portfolio-card {
-	transition: all 0.3s ease;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .portfolio-card:hover {
 	transform: translateY(-0.5rem);
 	box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* 防止首次渲染閃爍 - 統一初始狀態 */
+header,
+.flex.justify-center,
+.grid.grid-cols-1 {
+	opacity: 0;
+	transform: translateY(50px);
 }
 
 /* 響應式調整 */

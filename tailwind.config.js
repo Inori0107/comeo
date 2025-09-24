@@ -18,31 +18,6 @@ export default {
 			},
 			fontFamily: {
 				sans: ["ui-sans-serif", "Roboto", "Noto Sans", "Arial"]
-			},
-			maxWidth: {
-				container: "1120px"
-			},
-			spacing: {
-				section: "64px"
-			},
-			borderRadius: {
-				surface: "16px"
-			},
-			boxShadow: {
-				surface: "0 1px 0 rgba(16, 24, 40, 0.02)"
-			},
-			animation: {
-				float: "float 6s ease-in-out infinite"
-			},
-			keyframes: {
-				float: {
-					"0%, 100%": {
-						transform: "translateY(0) rotate(0.5deg)"
-					},
-					"50%": {
-						transform: "translateY(-8px) rotate(-0.6deg)"
-					}
-				}
 			}
 		}
 	},
