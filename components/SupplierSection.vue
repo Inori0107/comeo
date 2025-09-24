@@ -9,13 +9,16 @@
 
 			<!-- 遠岫科技介紹 -->
 			<div class="bg-white rounded-2xl p-4 lg:p-8 shadow-lg border border-gray-200 mb-8 flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-8">
-				<img
+				<NuxtImg
 					src="/yenshow.png"
 					alt="遠岫科技 Logo - 專注於人臉辨識門禁、智慧對講、影像監控與整合平台的科技公司"
-					class="w-48 h-48 object-contain mx-auto"
-					loading="lazy"
-					width="192"
-					height="192"
+					class="w-48 h-auto object-contain mx-auto"
+					loading="eager"
+					width="400"
+					height="200"
+					format="webp"
+					quality="90"
+					preload
 				/>
 				<div class="flex-1">
 					<h3 class="text-2xl font-bold text-gray-900 mb-4">遠岫科技有限公司</h3>
