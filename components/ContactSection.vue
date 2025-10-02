@@ -28,7 +28,7 @@
 							</div>
 							<div>
 								<p class="text-sm text-gray-600">電話</p>
-								<a href="tel:0222233355" class="font-bold text-gray-900 text-lg hover:text-brand-orange transition-colors">02-2223-3355</a>
+								<a href="tel:0920-370-177" class="font-bold text-gray-900 text-lg hover:text-brand-orange transition-colors">0920-370-177</a>
 							</div>
 						</div>
 
@@ -42,7 +42,7 @@
 							</div>
 							<div>
 								<p class="text-sm text-gray-600">Email</p>
-								<a href="mailto:stan@yenshow.com" class="font-bold text-gray-900 text-lg hover:text-brand-orange transition-colors">stan@yenshow.com</a>
+								<a href="mailto:stan@comeo.com.tw" class="font-bold text-gray-900 text-lg hover:text-brand-orange transition-colors">stan@comeo.com.tw</a>
 							</div>
 						</div>
 
@@ -74,7 +74,11 @@
 							<div class="flex-1">
 								<p class="text-sm text-gray-600 mb-2">社群媒體</p>
 								<div class="flex flex-wrap gap-2">
-									<a href="#" class="flex items-center gap-2 px-3 py-1.5 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors text-sm">
+									<a
+										href="https://www.facebook.com/ComeoTech"
+										target="_blank"
+										class="flex items-center gap-2 px-3 py-1.5 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors text-sm"
+									>
 										<svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
 											<path
 												fill="#ffffff"
@@ -83,7 +87,11 @@
 										</svg>
 										Facebook
 									</a>
-									<a href="#" class="flex items-center gap-2 px-3 py-1.5 bg-green-500 text-white rounded-md hover:bg-green-600 transition-colors text-sm">
+									<a
+										href="https://page.line.me/941uvbfl"
+										target="_blank"
+										class="flex items-center gap-2 px-3 py-1.5 bg-green-500 text-white rounded-md hover:bg-green-600 transition-colors text-sm"
+									>
 										<svg class="w-[20px] h-[20px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
 											<path
 												fill="#ffffff"
